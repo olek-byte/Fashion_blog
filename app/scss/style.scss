@@ -4,5 +4,16 @@
 @import 'global';
 
 
+p {
+  color: red;
+}
 
+h1{
+  color: green;
+}
+
+h2{
+  color: #fff;
+  background-color: black;
+}
 @import 'media';
