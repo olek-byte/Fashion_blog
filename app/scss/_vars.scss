@@ -1,0 +1,44 @@
+$accent: #C9A96E;
+$heading: #171717;
+$text: #666666;
+
+$by: #B1B1B1;
+$border: #E5E5E5;
+$bg: #F8F9FA;
+
+$social: #5A5A5A;
+$social-text: #999999;
+$pagination: #A2A2A2;
+
+%sans-400 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: 400;
+}
+
+%serif-700 {
+  font-family: 'PT Serif', serif;
+  font-weight: 700;
+}
+
+%serifIt-400 {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+%serif-400 {
+  font-family: 'PT Serif', serif;
+  font-weight: 400;
+}
+
+%center{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+// %image-settings{
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: cover;
+// }
