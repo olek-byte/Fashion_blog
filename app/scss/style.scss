@@ -1,6 +1,7 @@
 @import 'vars';
 @import 'fonts';
 @import 'reset';
+@import 'libs';
 @import 'global';
 
 //Header//
@@ -17,11 +18,11 @@
 
   &__bottom {
     position: relative;
+    max-width: 1920px;
+    min-height: 700px;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 85% 50%;
-    max-width: 1920px;
-    min-height: 700px;
   }
 
   &__content {
@@ -36,8 +37,11 @@
   }
 
   &__name {
-    text-transform: uppercase;
     margin-bottom: 10px;
+    text-transform: uppercase;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__title {
@@ -45,6 +49,9 @@
     max-width: 560px;
     @extend %serif-700;
     font-size: 40px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
   }
 
   &__content-list {
@@ -53,6 +60,10 @@
   }
 
   &__content-item {
+    max-width: 200px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
     &:not(:last-child) {
       margin-right: 10px;
     }
@@ -94,12 +105,11 @@
 }
 
 //blog-card//
-.blog-card{
+.blog-card {
+  margin: 0 30px 30px 0;
   max-width: 370px;
   box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
   transition: box-shadow 0.5s;
-  margin-right: 30px;
-  margin-bottom: 30px;
 
   &:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
@@ -107,6 +117,8 @@
 
   &__img {
     margin-bottom: 18px;
+    max-width: 370px;
+    min-height: 280px;
   }
 
   &__box {
@@ -114,23 +126,31 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
     padding: 0 56px 14px 60px;
     text-align: center;
   }
 
   &__name {
+    margin-bottom: 16px;
+
     font-size: 12px;
     text-transform: uppercase;
     color: $accent;
-    margin-bottom: 16px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__title {
+    margin-bottom: 18px;
     font-size: 20px;
     line-height: 1.4;
     @extend %serif-400;
     color: $heading;
-    margin-bottom: 18px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 2;
   }
 
   &__list {
@@ -138,8 +158,12 @@
   }
 
   &__item {
+    max-width: 150px;
     @extend %serif-400;
     font-size: 12px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
 
     &:not(:last-child) {
       margin-right: 12px;
@@ -176,10 +200,11 @@
   }
 
   &__content {
-    margin-right: 100px;
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
+
+    margin-right: 100px;
   }
 }
 
@@ -189,14 +214,17 @@
 
   &__img {
     margin-bottom: 28px;
+    width: 100%;
+
+    object-fit: cover;
+    max-width: 770px;
+    max-height: 349px;
   }
 
   &__box {
     display: flex;
     flex-direction: column;
-    padding-left: 30px;
-    padding-right: 142px;
-    padding-bottom: 30px;
+    padding: 0 142px 30px 30px;
   }
 
   .blog-card__list {
@@ -205,11 +233,11 @@
 
   .blog-card__text {
     max-width: 616px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 5;
   }
-
 }
-
-
 
 .pagination {
   padding: 18px 38px;
@@ -220,18 +248,25 @@
     justify-content: space-between;
   }
 
-
   &__span {
+    max-width: 200px;
     text-transform: uppercase;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__list {
     display: flex;
-    color: $heading;
     margin: 0 32px;
+    color: $heading;
   }
 
   &__item {
+    max-width: 20px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
     &:not(:last-child) {
       margin-right: 44px;
     }
@@ -278,23 +313,29 @@
     &:hover {
       color: $pagination;
     }
-
   }
 }
 
 .blog-aside {
-  min-width: 270px;
   display: flex;
   flex-direction: column;
+  min-width: 270px;
 
   &__link {
     display: block;
-    text-align: center;
+    max-width: 270px;
     padding: 15px 72px;
-    border: 1px solid $border;
+    margin-bottom: 20px;
+
     font-size: 16px;
     @extend %serif-400;
-    margin-bottom: 20px;
+    text-align: center;
+
+    border: 1px solid $border;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
     transition: all 0.4s;
 
     &:hover {
@@ -309,6 +350,7 @@
       position: relative;
       margin-right: 0;
       margin-bottom: 70px;
+      margin: 0 0 70px;
 
       &::before {
         content: '';
@@ -318,7 +360,17 @@
         border-bottom: 1px solid $border;
         width: 100%;
       }
+
+      img {
+        max-width: 270px;
+        max-height: 180px;
+      }
     }
+  }
+
+  &__img {
+    max-width: 270px;
+    min-height: 160px;
   }
 
   &__content {
@@ -334,16 +386,24 @@
     font-size: 16px;
     @extend %serif-700;
     margin-bottom: 5px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__position {
     @extend %serifIt-400;
     margin-bottom: 15px;
     line-height: 1.7;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__text {
     margin-bottom: 15px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 5;
   }
 
   &__span {
@@ -361,6 +421,8 @@
 }
 
 .filter-category {
+  margin-top: 50px; //почему не работает?(не думаю что из-за схлопывания маржинов)
+
   &__list {
     margin-bottom: 52px;
   }
@@ -371,12 +433,19 @@
     &:last-child {
       border-bottom: none;
     }
+
+    span {
+      max-width: 120px;
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
+    }
   }
 
   &__link {
     display: flex;
     justify-content: space-between;
     padding: 18px 0;
+
     @extend %serif-400;
     transition: color 0.5s;
 
@@ -396,8 +465,7 @@
   }
 
   &__item {
-    margin-right: 3px;
-    margin-bottom: 3px;
+    margin: 0 3px 3px 0;
   }
 
   &__link {
@@ -405,13 +473,15 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+
+    padding: 10px;
     height: 86px;
     width: 86px;
     background-color: $bg;
 
     &:hover {
-      background-color: $pagination;
       color: $border;
+      background-color: $pagination;
 
       use {
         fill: $border;
@@ -420,51 +490,39 @@
 
     span {
       font-size: 12px;
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
   }
 
 
   .icon {
     fill: $social;
+    width: 20px;
+    height: 20px;
 
     &--fb {
       width: 11px;
-      height: 20px;
     }
 
     &--pint {
       width: 15px;
-      height: 20px;
     }
 
     &--vimeo {
-      width: 20px;
       height: 18px;
     }
 
-    &--dribbble {
-      width: 20px;
-      height: 20px;
-    }
-
     &--tw {
-      width: 20px;
       height: 17px;
     }
 
     &--be {
-      width: 20px;
       height: 13px;
-    }
-
-    &--insta {
-      width: 20px;
-      height: 20px;
     }
 
     &--youtube {
       width: 16px;
-      height: 20px;
     }
 
     &--google {
@@ -482,38 +540,67 @@
   }
 
   &__item {
-    margin-right: 10px;
-    margin-bottom: 10px;
+    margin: 0 10px 10px 0;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
   }
 
   &__link {
-    @extend %serif-400;
-    padding: 6px 13px;
-    background-color: $bg;
     display: block;
+    padding: 6px 13px;
+    max-width: 150px;
+
+    @extend %serif-400;
+    line-height: 1.9;
+    background-color: $bg;
+
+    transition: all 0.5s;
+
+    &:hover {
+      background-color: $by;
+      color: #ff0000;
+    }
   }
 }
-
 
 .slider-bottom {
 
   &__title {
+    margin-bottom: 46px;
+
     @extend %serif-400;
     font-size: 24px;
     text-align: center;
+
     color: $heading;
-    margin-bottom: 46px;
-    display: block;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    a {
+      transition: color 0.4s;
+
+      &:hover {
+        color: #ff0000;
+      }
+    }
   }
 
-  &__list {
-    display: flex;
+  &__item {
+
+    img {
+      max-width: 296px;
+      min-height: 296px;
+      object-fit: cover;
+      transition: opacity 0.6s;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
   }
 }
-
-
-
-
 
 //FOOTER//
 .footer {
@@ -550,16 +637,17 @@
   }
 
   &__link {
-    background-color: #fff;
-    border: 1px solid $border;
-    border-radius: 50%;
-    // padding: 9px;
-    width: 34px;
-    height: 34px;
-
     display: flex;
     justify-content: center;
     align-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 50%;
+
     transition: all 0.4s;
 
     &:hover {
@@ -607,16 +695,16 @@
   }
 
 
-
-
-
-
-
-
   &__copyright {
     padding: 34px 0;
-    border-top: 1px solid $border;
     width: 100%;
     text-align: center;
+
+    border-top: 1px solid $border;
+
+    p {
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
+    }
   }
 }
