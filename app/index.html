@@ -4,20 +4,22 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Fashion Blog</title>
   <link rel="stylesheet" href="css/style.min.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="top-container">
-      <div class="header__top">
 
-        <a class="header__logo logo" href="#">
-          <img src="images/logo.png" alt="logo">
-        </a>
+  <header class="header">
+    <div class="container container--top">
+      <div class="header__inner">
 
         <nav class="header__nav main-nav">
+
+          <a class="header__logo logo" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Home</a>
@@ -35,33 +37,8 @@
               <a class="main-nav__link" href="#">Purchase</a>
             </li>
           </ul>
+
         </nav>
-
-      </div>
-    </div>
-
-    <div class="header__bottom" style="background-image: url('images/header-bg.jpg');">
-      <div class="container">
-
-        <div class="header__content">
-
-          <span class="header__name">Vehicle</span>
-          <span class="header__title">One of Saturn’s largest rings may be newer than anyone</span>
-
-          <ul class="header__content-list">
-            <li class="header__content-item">
-              <time class="header__time">June 6, 2019</time>
-            </li>
-            <li class="header__content-item">
-              <span class="header__span">By</span>
-              <a class="header__content-link" href="#">Rickie Baroch</a>
-            </li>
-            <li class="header__content-item">
-              <a class="header__content-link" href="#">4 comments</a>
-            </li>
-          </ul>
-
-        </div>
 
       </div>
     </div>
@@ -69,11 +46,108 @@
 
   <main class="main">
 
-    <section class="blog">
+    <section class="hero">
+      <div class="hero__inner">
+
+        <div class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/hero-1.jpg');">
+            <div class="container">
+
+              <div class="hero__content">
+
+                <a class="hero__name hero__link" href="#">Vehicle</a>
+                <span class="hero__title">One of Saturn’s largest rings may be newer than anyone</span>
+
+                <ul class="hero__list">
+                  <li class="hero__list-item">
+                    <time class="hero__time">June 6, 2019</time>
+                  </li>
+                  <li class="hero__list-item">
+                    <span class="hero__span">By</span>
+                    <a class="hero__link" href="#">Rickie Baroch</a>
+                  </li>
+                  <li class="hero__list-item">
+                    <a class="hero__link" href="#">4 comments</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+        <div class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/blog-category.jpg');">
+            <div class="container">
+
+              <div class="hero__content">
+
+                <a class="hero__name hero__link" href="#">Vehicle</a>
+                <span class="hero__title">One of Saturn’s largest rings may be newer than anyone</span>
+
+                <ul class="hero__list">
+                  <li class="hero__list-item">
+                    <time class="hero__time">June 6, 2019</time>
+                  </li>
+                  <li class="hero__list-item">
+                    <span class="hero__span">By</span>
+                    <a class="hero__link" href="#">Rickie Baroch</a>
+                  </li>
+                  <li class="hero__list-item">
+                    <a class="hero__link" href="#">4 comments</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__item">
+          <div class="hero__bg" style="background-image: url('images/hero-3.jpg');">
+            <div class="container">
+
+              <div class="hero__content hero__content--red">
+
+                <a class="hero__name hero__link" href="#">Vehicle</a>
+                <span class="hero__title">One of Saturn’s largest rings may be newer than anyone</span>
+
+                <ul class="hero__list">
+                  <li class="hero__list-item">
+                    <time class="hero__time">June 6, 2019</time>
+                  </li>
+                  <li class="hero__list-item">
+                    <span class="hero__span">By</span>
+                    <a class="hero__link" href="#">Rickie Baroch</a>
+                  </li>
+                  <li class="hero__list-item">
+                    <a class="hero__link" href="#">4 comments</a>
+                  </li>
+                </ul>
+
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </section>
+
+    <div class="blog">
       <div class="container">
 
         <div class="blog__inner">
-          <div class="blog__content">
+
+          <section class="blog-content">
+
+            <h2 class="title title--hidden">Fashion Blog</h2>
 
             <article class="blog-card">
               <a class="blog-card__link" href="#">
@@ -81,29 +155,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Tourism
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest rings may be newer than anyone
-                  </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -119,28 +187,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Sport
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest rings may be newer than anyone
-                  </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                  <li class="blog-bottom__item">
+
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -148,7 +211,6 @@
                 </ul>
 
               </div>
-
             </article>
 
             <article class="blog-card">
@@ -157,28 +219,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest rings may be newer than anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -186,7 +243,6 @@
                 </ul>
 
               </div>
-
             </article>
 
             <article class="blog-card">
@@ -195,29 +251,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Clothes
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest rings may be newer than anyone
-                  </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -225,7 +275,6 @@
                 </ul>
 
               </div>
-
             </article>
 
             <article class="blog-card">
@@ -234,29 +283,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Clothes
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest rings may be newer
-                    than anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -264,7 +307,6 @@
                 </ul>
 
               </div>
-
             </article>
 
             <article class="blog-card">
@@ -273,30 +315,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -304,50 +339,40 @@
                 </ul>
 
               </div>
-
             </article>
 
 
+            <article class="blog-card blog-card--fashion">
+              <img class="blog-card__img" src="images/blog-category.jpg" alt="blog photo">
 
-            <article class="blog-fashion blog-card">
-              <img class="blog-fashion__img" src="images/blog-category.jpg" alt="blog photo">
+              <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Fashion
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-
-              <div class="blog-fashion__box">
-
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-
-                  <li class="blog-card__item">
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                  <li class="blog-bottom__item">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
                   </li>
-
-                  <li class="blog-card__item">
-                    <a class="blog-card__link" href="#">4 comments</a>
+                  <li class="blog-bottom__item">
+                    <a class="blog-bottom__link" href="#">
+                      6 comments
+                    </a>
                   </li>
                 </ul>
 
-                <div class="blog-card__text">
+                <div class="blog-card__text text">
                   <p>
                     Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
                     totam rem sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
@@ -359,44 +384,36 @@
             </article>
 
 
-
             <article class="blog-card">
               <a class="blog-card__link" href="#">
                 <img class="blog-card__img" src="images/blog-card/7.jpg" alt="blog photo">
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
                   </li>
                 </ul>
-              </div>
 
+              </div>
             </article>
 
             <article class="blog-card">
@@ -405,30 +422,23 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
@@ -436,7 +446,6 @@
                 </ul>
 
               </div>
-
             </article>
 
             <article class="blog-card">
@@ -445,37 +454,30 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
                   </li>
                 </ul>
-              </div>
 
+              </div>
             </article>
 
             <article class="blog-card">
@@ -484,49 +486,42 @@
               </a>
 
               <div class="blog-card__box">
+                <a class="blog-card__link category-link" href="#">
+                  Tourism
+                </a>
+                <h3 class="blog-card__title title">
+                  One of Saturn’s largest rings may be newer than anyone
+                </h3>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    Fashion
-                  </a>
-                </span>
-
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
+                <ul class="blog-card__list blog-bottom__list">
+                  <li class="blog-bottom__item">
+                    <time class="blog-bottom__time">
                       June 6, 2019
                     </time>
                   </li>
-                  <li class="blog-card__item">
+                  <li class="blog-bottom__item">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
+                    <span class="blog-bottom__span">By</span>
+                    <a class="blog-bottom__link" href="#">
                       Rickie Baroch
                     </a>
 
                   </li>
                 </ul>
-              </div>
 
+              </div>
             </article>
 
             <div class="pagination">
               <div class="pagination__inner">
 
                 <span class="pagination__span">
-                  <a class="pagination__link pagination__link--prev" href="#">Older post</a>
+                  <a class="pagination__link pagination__link--prev pagination__link--active">Older post</a>
                 </span>
 
                 <ul class="pagination__list">
                   <li class="pagination__item">
-                    <a class="pagination__link" href="#">
+                    <a class="pagination__link pagination__link--displayed" href="#">
                       1
                     </a>
                   </li>
@@ -538,7 +533,7 @@
                   </li>
 
                   <li class="pagination__item">
-                    <a class="pagination__link" href="#">
+                    <a class="pagination__link pagination__link--displayed" href="#">
                       3
                     </a>
                   </li>
@@ -550,7 +545,7 @@
                   </li>
 
                   <li class="pagination__item">
-                    <a class="pagination__link" href="#">
+                    <a class="pagination__link pagination__link--displayed" href="#">
                       8
                     </a>
                   </li>
@@ -563,157 +558,131 @@
               </div>
             </div>
 
-          </div>
+          </section>
 
 
           <div class="blog-aside">
 
-            <a href="#" class="blog-aside__link">About the author</a>
+            <section class="author">
 
-            <article class="blog-aside__card blog-card blog-aside__card--line">
-              <img class="blog-aside__img" src="images/blog-aside/1.jpg" alt="blog aside photo">
+              <h2 class="aside-title author__title">About the author</h2>
 
-              <div class="blog-aside__content">
-                <span class="blog-aside__name">Kate Willems</span>
-                <span class="blog-aside__position">Food & cooking bloger</span>
-                <div class="blog-aside__text">
-                  <p>
-                    Hi, I'm Sonia. Cooking is the way I express my creative side to the world. Welcome to my Kitchen
-                    Corner on…
-                  </p>
-                </div>
+              <article class="author__card">
+                <a href="#">
+                  <img class="author__img" src="images/blog-aside/1.jpg" alt="author photo">
+                </a>
 
-                <span class="blog-card__name blog-aside__span">
-                  <a class="blog-card__link blog-card__link--category" href="#">
+                <div class="author__content">
+                  <h3 class="author__name">Kate Willems</h3>
+                  <span class="author__position">Food & cooking bloger</span>
+                  <div class="author__text text">
+                    <p>
+                      Hi, I'm Sonia. Cooking is the way I express my creative side to the world. Welcome to my Kitchen
+                      Corner on…
+                    </p>
+                  </div>
+
+                  <a class="author__link category-link" href="#">
                     Continue Reading
                   </a>
-                </span>
 
-              </div>
-            </article>
+                </div>
+              </article>
 
-            <a href="#" class="blog-aside__link">Featured posts</a>
+            </section>
 
-            <article class="blog-card blog-aside__card">
-              <a class="blog-card__link" href="#">
-                <img class="blog-aside__img" src="images/blog-aside/2.jpg" alt="blog photo">
-              </a>
+            <section class="posts">
 
-              <div class="blog-card__box blog-aside__content">
+              <h2 class="aside-title posts__title">Featured posts</h2>
 
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
+
+              <article class="posts__card">
+                <a class="posts__link" href="#">
+                  <img class="posts__img" src="images/blog-aside/2.jpg" alt="post photo">
+                </a>
+                <div class="posts__content">
+                  <a class="posts__link category-link" href="#">
                     jeans
                   </a>
-                </span>
+                  <h3 class="posts__title title">
+                    One of Saturn’s largest rings may be newer than anyone
+                  </h3>
+                  <ul class="posts__list blog-bottom__list">
+                    <li class="blog-bottom__item">
+                      <time class="blog-bottom__time">
+                        June 6, 2019
+                      </time>
+                    </li>
+                    <li class="blog-bottom__item">
+                      <span class="blog-bottom__span">By</span>
+                      <a class="blog-bottom__link" href="#">
+                        Rickie Baroch
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
 
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
-                      June 6, 2019
-                    </time>
-                  </li>
-                  <li class="blog-card__item">
-
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
-                      Rickie Baroch
-                    </a>
-
-                  </li>
-                </ul>
-              </div>
-
-            </article>
-
-            <article class="blog-card blog-aside__card">
-              <a class="blog-card__link" href="#">
-                <img class="blog-aside__img" src="images/blog-aside/3.jpg" alt="blog photo">
-              </a>
-
-              <div class="blog-card__box blog-aside__content">
-
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
-                    City
+              <article class="posts__card">
+                <a class="posts__link" href="#">
+                  <img class="posts__img" src="images/blog-aside/3.jpg" alt="post photo">
+                </a>
+                <div class="posts__content">
+                  <a class="posts__link category-link" href="#">
+                    city
                   </a>
-                </span>
+                  <h3 class="posts__title title">
+                    One of Saturn’s largest rings may be newer than anyone
+                  </h3>
+                  <ul class="posts__list blog-bottom__list">
+                    <li class="blog-bottom__item">
+                      <time class="blog-bottom__time">
+                        June 6, 2019
+                      </time>
+                    </li>
+                    <li class="blog-bottom__item">
+                      <span class="blog-bottom__span">By</span>
+                      <a class="blog-bottom__link" href="#">
+                        Rickie Baroch
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
 
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
-
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
-                      June 6, 2019
-                    </time>
-                  </li>
-                  <li class="blog-card__item">
-
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
-                      Rickie Baroch
-                    </a>
-
-                  </li>
-                </ul>
-
-              </div>
-
-            </article>
-
-            <article class="blog-card blog-aside__card">
-              <a class="blog-card__link" href="#">
-                <img class="blog-aside__img" src="images/blog-aside/4.jpg" alt="blog photo">
-              </a>
-
-              <div class="blog-card__box blog-aside__content">
-
-                <span class="blog-card__name">
-                  <a class="blog-card__link blog-card__link--category" href="#">
+              <article class="posts__card">
+                <a class="posts__link" href="#">
+                  <img class="posts__img" src="images/blog-aside/4.jpg" alt="post photo">
+                </a>
+                <div class="posts__content">
+                  <a class="posts__link category-link" href="#">
                     Photography
                   </a>
-                </span>
+                  <h3 class="posts__title title">
+                    One of Saturn’s largest rings may be newer than anyone
+                  </h3>
+                  <ul class="posts__list blog-bottom__list">
+                    <li class="blog-bottom__item">
+                      <time class="blog-bottom__time">
+                        June 6, 2019
+                      </time>
+                    </li>
+                    <li class="blog-bottom__item">
+                      <span class="blog-bottom__span">By</span>
+                      <a class="blog-bottom__link" href="#">
+                        Rickie Baroch
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </article>
 
-                <span class="blog-card__title">
-                  <a class="blog-card__link" href="#">
-                    One of Saturn’s largest
-                    rings may be newer than
-                    anyone </a>
-                </span>
+            </section>
 
-                <ul class="blog-card__list">
-                  <li class="blog-card__item">
-                    <time class="blog-card__time">
-                      June 6, 2019
-                    </time>
-                  </li>
-                  <li class="blog-card__item">
+            <div class="filter-category">
 
-                    <span class="blog-card__span">By</span>
-                    <a class="blog-card__link" href="#">
-                      Rickie Baroch
-                    </a>
+              <h2 class="aside-title filter-category__title">Categories</h2>
 
-                  </li>
-                </ul>
-
-              </div>
-            </article>
-
-            <div class="blog-aside__category filter-category">
-              <a href="#" class="blog-aside__link">Categories</a>
               <ul class="filter-category__list">
                 <li class="filter-category__item">
                   <a href="#" class="filter-category__link">
@@ -753,11 +722,10 @@
 
             </div>
 
+            <div class="media">
+              <h2 class="aside-title media__title">Social media</h2>
 
-            <div class="blog-aside__media media">
-              <a href="#" class="blog-aside__link">Social media</a>
               <ul class="media__list">
-
                 <li class="media__item">
                   <a href="#" class="media__link">
                     <svg class="icon icon--fb">
@@ -773,7 +741,7 @@
                     <svg class="icon icon--pint">
                       <use xlink:href="#pint"></use>
                     </svg>
-                    <span> 814</span>
+                    <span>814</span>
                     <span>followers</span>
                   </a>
                 </li>
@@ -851,8 +819,9 @@
 
             </div>
 
-            <div class="blog-aside__tags tags">
-              <a href="#" class="blog-aside__link">Tags</a>
+            <div class="tags">
+
+              <h2 class="aside-title tags__title">Tags</h2>
 
               <ul class="tags__list">
 
@@ -931,72 +900,91 @@
             </div>
 
           </div>
+
+        </div>
+      </div>
+
+      <section class="slider-bottom">
+        <div class="container">
+          <span class="slider-bottom__title">Follow our <a href="#"> @instagram_name</a></span>
         </div>
 
-      </div>
-    </section>
+       
 
-    <section class="slider-bottom">
-      <div class="container">
-        <span class="slider-bottom__title">Follow our <a href="#"> @instagram_name</a></span>
-      </div>
+          <ul class="slider-bottom__list">
 
-      <ul class="slider-bottom__list">
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/1.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/1.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/2.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/2.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/3.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/3.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/4.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/4.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/5.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/5.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/6.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
-        <li class="slider-bottom__item">
-          <a href="#">
-            <img src="images/slider-bottom/6.jpg" alt="insta images" class="slider-bottom__img">
-          </a>
-        </li>
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/6.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
+
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/6.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
+
+            <li class="slider-bottom__item">
+              <a href="#">
+                <img src="images/slider-bottom/6.jpg" alt="insta images" class="slider-bottom__img">
+              </a>
+            </li>
 
 
-      </ul>
+          </ul>
+   
 
-    </section>
-
-
+      </section>
 
   </main>
 
   <footer class="footer">
     <div class="container">
       <div class="footer__inner">
-        <a class="footer__logo logo" href="#">
-          <img src="images/logo.png" alt="logo">
-        </a>
-
 
         <nav class="footer__nav main-nav">
+
+          <a class="footer__logo logo" href="#">
+            <img src="images/logo.png" alt="logo">
+          </a>
+
           <ul class="main-nav__list">
             <li class="main-nav__item">
               <a class="main-nav__link" href="#">Home</a>

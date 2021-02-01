@@ -10,15 +10,20 @@ const browserSync  = require('browser-sync').create();
 const fileinclude  = require('gulp-file-include');
 
 
-function html(){
-  return src(['app/html/pages/*.html'])
-  .pipe(fileinclude({
-      prefix: '@@',
-      basepath: '@file'
-  }))
-  .pipe(dest('app'))
-  .pipe(browserSync.stream());
-}
+// function html(){
+//   return src(['app/html/pages/*.html'])
+//   .pipe(fileinclude({
+//       prefix: '@@',
+//       basepath: '@file'
+//   }))
+//   .pipe(dest('app'))
+//   .pipe(browserSync.stream());
+// }
+
+  function html(){
+    return src('app/*.html')
+    .pipe(browserSync.stream())
+  }
  
 
 function browsersync() {
@@ -91,8 +96,8 @@ function cleanDist() {
 
 function watching() {
   watch(['app/scss/**/*.scss'], styles);
-  watch(['app/js/**/*.js'], scripts);
-  watch(['app/html/**/*.html'], html);
+  watch(['app/js/main.js'], scripts);
+  watch(['app/*.html'], html);
 }
 
 exports.html = html;

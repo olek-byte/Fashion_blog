@@ -6,17 +6,46 @@
 
 //Header//
 .header {
-  padding: 34px 0 60px;
+  padding: 34px 0;
   background-color: #fff;
+}
 
-  &__top {
+//Main nav//
+.main-nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &__list {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 34px;
   }
 
-  &__bottom {
+  &__item {
+    &:not(:last-child) {
+      margin-right: 34px;
+    }
+  }
+
+  &__link {
+    transition: all 0.5s;
+
+    &:hover {
+      color: $accent;
+      border-bottom: 1px solid $accent;
+    }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
+  }
+}
+
+//Hero//
+.hero {
+  margin-bottom: 60px;
+  background-color: #fff;
+
+  &__bg {
     position: relative;
     max-width: 1920px;
     min-height: 700px;
@@ -28,12 +57,11 @@
   &__content {
     position: absolute;
     bottom: 60px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-
     color: #fff;
+
+    &--red {
+      color: rgb(243, 48, 48);
+    }
   }
 
   &__name {
@@ -54,12 +82,12 @@
     -webkit-line-clamp: 2;
   }
 
-  &__content-list {
+  &__list {
     display: flex;
     @extend %serif-400;
   }
 
-  &__content-item {
+  &__list-item {
     max-width: 200px;
     @extend %text-hiding;
     -webkit-line-clamp: 1;
@@ -73,36 +101,52 @@
     color: $by;
   }
 
-  &__content-link {
+  &__link {
+    display: inline-flex;
     transition: color 0.4s;
 
     &:hover {
       color: $accent;
     }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
   }
 }
 
-//Main nav//
-.main-nav {
-  &__list {
+//blog//
+.blog {
+  background-color: #fff;
+
+  &__inner {
     display: flex;
-  }
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 80px;
 
-  &__item {
-    &:not(:last-child) {
-      margin-right: 34px;
+    @include r(1099) {
+      // justify-content: center;
     }
   }
 
-  &__link {
-    transition: all 0.5s;
+}
 
-    &:hover {
-      color: $accent;
-      border-bottom: 1px solid $accent;
-    }
+.blog-content {
+  display: flex;
+  flex-wrap: wrap;
+  // margin-right: -30px;
+  max-width: 800px;
+
+  @include r(1099) {
+    // margin: 0 auto;
+    // justify-content: space-between;
+    justify-content: center;
+    // align-items: center;
+     max-width:100%;
   }
 }
+
 
 //blog-card//
 .blog-card {
@@ -111,14 +155,17 @@
   box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
   transition: box-shadow 0.5s;
 
+  @include r(1099){
+    margin: 0 30px 30px 30px;
+  }
+
   &:hover {
     box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
   }
 
   &__img {
-    margin-bottom: 18px;
     max-width: 370px;
-    min-height: 280px;
+    max-height: 280px;
   }
 
   &__box {
@@ -144,111 +191,57 @@
 
   &__title {
     margin-bottom: 18px;
-    font-size: 20px;
-    line-height: 1.4;
-    @extend %serif-400;
-    color: $heading;
 
-    @extend %text-hiding;
-    -webkit-line-clamp: 2;
-  }
-
-  &__list {
-    display: flex;
-  }
-
-  &__item {
-    max-width: 150px;
-    @extend %serif-400;
-    font-size: 12px;
-
-    @extend %text-hiding;
-    -webkit-line-clamp: 1;
-
-    &:not(:last-child) {
-      margin-right: 12px;
-    }
-  }
-
-  &__span {
-    color: $by;
-  }
-
-  &__link {
-    transition: all 0.6s;
-
-    &:hover {
-      color: $accent;
-    }
-
-    &--category {
-      &:hover {
-        border-bottom: 1px solid #CAE0E1;
-        color: #CAE0E1;
-      }
-    }
   }
 }
 
-
-.blog {
-  padding-bottom: 80px;
-  background-color: #fff;
-
-  &__inner {
-    display: flex;
-  }
-
-  &__content {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-
-    margin-right: 100px;
-  }
-}
-
-.blog-fashion {
-  max-width: 770px;
-  box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
-
-  &__img {
-    margin-bottom: 28px;
-    width: 100%;
-
-    object-fit: cover;
+.blog-card {
+  &--fashion {
     max-width: 770px;
-    max-height: 349px;
-  }
+    box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
 
-  &__box {
-    display: flex;
-    flex-direction: column;
-    padding: 0 142px 30px 30px;
-  }
+    .blog-card__img {
+      margin-bottom: 28px;
+      width: 100%;
 
-  .blog-card__list {
-    margin-bottom: 20px;
-  }
+      object-fit: cover;
+      max-width: 770px;
+      max-height: 349px;
+    }
 
-  .blog-card__text {
-    max-width: 616px;
+    .blog-card__link {
+      text-align: left;
+    }
 
-    @extend %text-hiding;
-    -webkit-line-clamp: 5;
+    .blog-card__box {
+
+      align-items: start;
+      text-align: left;
+      padding: 0 142px 30px 30px;
+    }
+
+    .blog-card__list {
+      margin-bottom: 20px;
+    }
+
+    .blog-card__text {
+      max-width: 616px;
+    }
   }
 }
 
 .pagination {
-  padding: 18px 38px;
   border: 1px solid $border;
+
+  margin: 0 10%;
+  transform: translateX(0%);
 
   &__inner {
     display: flex;
-    justify-content: space-between;
   }
 
   &__span {
+    padding: 0 15px;
     max-width: 200px;
     text-transform: uppercase;
 
@@ -260,29 +253,27 @@
     display: flex;
     margin: 0 32px;
     color: $heading;
+
   }
 
   &__item {
-    max-width: 20px;
     @extend %text-hiding;
     -webkit-line-clamp: 1;
-
-    &:not(:last-child) {
-      margin-right: 44px;
-    }
   }
 
   &__link {
+    position: relative;
+    padding: 20px;
+    display: block;
+
     transition: color 0.5s;
 
     &--prev {
-      position: relative;
-
       &::before {
         content: '';
         position: absolute;
-        left: -14px;
-        top: 4px;
+        left: 0px;
+        top: 23px;
         background-image: url('../images/icons/angle.svg');
         background-repeat: no-repeat;
         width: 6px;
@@ -291,13 +282,11 @@
     }
 
     &--next {
-      position: relative;
-
       &::after {
         content: '';
         position: absolute;
-        right: -14px;
-        top: 4px;
+        right: 0px;
+        top: 23px;
         background-image: url('../images/icons/angle.svg');
         background-repeat: no-repeat;
         transform: rotate(180deg);
@@ -306,11 +295,23 @@
       }
     }
 
-    &--active {
-      color: $pagination;
+    &--displayed {
+      transition: background-color 0.5s;
+
+      &:hover {
+        background-color: $border;
+      }
     }
 
     &:hover {
+      color: $pagination;
+    }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
+
+    &--active {
       color: $pagination;
     }
   }
@@ -319,58 +320,36 @@
 .blog-aside {
   display: flex;
   flex-direction: column;
-  min-width: 270px;
+  max-width: 270px;
 
-  &__link {
-    display: block;
-    max-width: 270px;
-    padding: 15px 72px;
-    margin-bottom: 20px;
+  @include r(1099) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-self:flex-start;
 
-    font-size: 16px;
-    @extend %serif-400;
-    text-align: center;
-
-    border: 1px solid $border;
-
-    @extend %text-hiding;
-    -webkit-line-clamp: 1;
-
-    transition: all 0.4s;
-
-    &:hover {
-      color: #fff;
-      background-color: $accent;
-    }
   }
+}
 
-  &__card {
+.author {
+  padding-bottom: 50px;
 
-    &--line {
-      position: relative;
-      margin-right: 0;
-      margin-bottom: 70px;
-      margin: 0 0 70px;
-
-      &::before {
-        content: '';
-        position: absolute;
-        bottom: 44px;
-        right: 0;
-        border-bottom: 1px solid $border;
-        width: 100%;
-      }
-
-      img {
-        max-width: 270px;
-        max-height: 180px;
-      }
-    }
+  &__title {
+    margin-bottom: 20px;
   }
 
   &__img {
+    margin-bottom: 15px;
     max-width: 270px;
-    min-height: 160px;
+    max-height: 160px;
+    width: 100%;
+    object-fit: cover;
+
+    box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__content {
@@ -378,7 +357,14 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 20px 18px 15px;
+    padding: 20px 18px 0px;
+
+    box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
   }
 
   &__name {
@@ -402,26 +388,76 @@
 
   &__text {
     margin-bottom: 15px;
-    @extend %text-hiding;
-    -webkit-line-clamp: 5;
+
   }
 
-  &__span {
-    padding-top: 12px;
-    margin-bottom: 0;
-  }
+  &__link {
+    padding: 16px 0;
+    border-top: 1px solid #E5E5E5;
+    width: 115%;
 
-  &__card {
-    margin-right: 0;
-  }
+    transition: all 0.5s;
 
-  .blog-card__title {
-    font-size: 18px;
+    &:hover {
+      color: #fff;
+      background-color: #6bcece;
+    }
+
+    &:active {
+      color: #277c91;
+      background-color: #555858;
+    }
   }
 }
 
+
+.posts {
+  padding-bottom: 50px;
+
+  &__card {
+    padding-bottom: 16px;
+    margin-bottom: 30px;
+    box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
+
+    transition: box-shadow 0.5s;
+
+    &:hover {
+      box-shadow: 0px 0px 10px 5px rgba(0, 0, 0, 0.2);
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__img {
+    max-width: 270px;
+    max-height: 160px;
+  }
+
+  &__content {
+    padding: 0 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+
+}
+
+
+
+
 .filter-category {
-  margin-top: 50px; //почему не работает?(не думаю что из-за схлопывания маржинов)
+
+  &__title {
+    margin-bottom: 10px;
+  }
 
   &__list {
     margin-bottom: 52px;
@@ -452,16 +488,26 @@
     &:hover {
       color: red;
     }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
+
   }
 }
 
 .media {
+  padding-bottom: 70px;
+
+  &__title {
+    margin-bottom: 20px;
+  }
 
   &__list {
     display: flex;
     flex-wrap: wrap;
-
-    margin-bottom: 70px;
+    justify-content: center;
+    margin-right: -3px;
   }
 
   &__item {
@@ -475,8 +521,8 @@
     align-items: center;
 
     padding: 10px;
-    height: 86px;
-    width: 86px;
+    height: 88px;
+    width: 88px;
     background-color: $bg;
 
     &:hover {
@@ -485,6 +531,14 @@
 
       use {
         fill: $border;
+      }
+    }
+
+    &:active {
+      color: rgb(72, 45, 225);
+
+      use {
+        fill: rgb(72, 45, 225);
       }
     }
 
@@ -534,9 +588,14 @@
 
 .tags {
 
+  &__title {
+    margin-bottom: 20px;
+  }
+
   &__list {
     display: flex;
     flex-wrap: wrap;
+
   }
 
   &__item {
@@ -561,6 +620,10 @@
       background-color: $by;
       color: #ff0000;
     }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
   }
 }
 
@@ -584,14 +647,23 @@
       &:hover {
         color: #ff0000;
       }
+
+      &:active {
+        color: rgb(72, 45, 225);
+      }
     }
   }
 
+  &__list {}
+
+
   &__item {
+    display: flex !important;
+    justify-content: center;
 
     img {
       max-width: 296px;
-      min-height: 296px;
+      max-height: 296px;
       object-fit: cover;
       transition: opacity 0.6s;
 
@@ -615,11 +687,14 @@
   }
 
   &__logo {
-    margin-bottom: 60px;
+    img {
+      margin: 0 auto 60px;
+    }
   }
 
-  .footer__nav {
+  &__nav {
     margin-bottom: 30px;
+    display: block;
   }
 
   &__social {

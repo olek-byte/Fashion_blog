@@ -13,24 +13,104 @@ body {
   background-color: #fff;
 }
 
-.main{
+.main {
   flex-grow: 1;
 }
 
-.top-container{
-  max-width: 1790px;
+.container {
+  max-width: 1200px;
   padding: 0 15px;
   margin: 0 auto;
-}
 
-.container{
-  @extend .top-container;
-  max-width: 1200px;
+  &--top {
+    max-width: 1790px;
+  }
 }
 
 .title {
-  @extend %serif-400;
   font-size: 20px;
-  text-align: center;
+  line-height: 1.4;
+  @extend %serif-400;
   color: $heading;
+
+  @extend %text-hiding;
+  -webkit-line-clamp: 2;
+
+  &--hidden {
+    font-size: 0;
+  }
+}
+
+.text {
+  @extend %text-hiding;
+  -webkit-line-clamp: 5;
+}
+
+.aside-title {
+  max-width: 270px;
+  padding: 15px 72px;
+  font-size: 16px;
+  @extend %serif-400;
+  text-align: center;
+
+  border: 1px solid $border;
+
+  @extend %text-hiding;
+  -webkit-line-clamp: 1;
+}
+
+.category-link {
+  padding: 15px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $accent;
+  text-align: center;
+  width: 100%;
+
+  @extend %text-hiding;
+  -webkit-line-clamp: 1;
+  transition: all 0.6s;
+
+  &:hover {
+    color: #CAE0E1;
+  }
+
+  &:active {
+    color: rgb(72, 45, 225);
+  }
+}
+
+.blog-bottom {
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    max-width: 150px;
+    @extend %serif-400;
+    font-size: 12px;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    &:not(:last-child) {
+      margin-right: 12px;
+    }
+  }
+
+  &__span {
+    color: $by;
+  }
+
+  &__link {
+    transition: all 0.6s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
+  }
 }
