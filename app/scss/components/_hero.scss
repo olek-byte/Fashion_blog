@@ -1,0 +1,99 @@
+//Hero//
+.hero {
+  margin-bottom: 60px;
+  background-color: #fff;
+
+  @include r(480) {
+    margin-bottom: 30px;
+  }
+
+  &__bg {
+    position: relative;
+    max-width: 1920px;
+    min-height: 700px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 85% 50%;
+
+    @include r(767) {
+      min-height: 500px;
+    }
+
+    @include r(767) {
+      min-height: 450px;
+    }
+  }
+
+  &__content {
+    position: absolute;
+    bottom: 60px;
+
+    display: inline-flex;
+    flex-direction: column;
+
+    color: #fff;
+
+    &--red {
+      color: rgb(243, 48, 48);
+    }
+  }
+
+  &__name {
+
+    // margin-bottom: 10px;
+    padding: 20px 0;
+    text-transform: uppercase;
+
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+    max-width: 560px;
+    @extend %serif-700;
+    font-size: 40px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 4;
+
+    @include r(767) {
+      font-size: 35px;
+    }
+
+    @include r(480) {
+      font-size: 30px;
+    }
+  }
+
+  &__list {
+    display: flex;
+    @extend %serif-400;
+  }
+
+  &__list-item {
+    max-width: 200px;
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
+    &:not(:last-child) {
+      margin-right: 10px;
+    }
+  }
+
+  &__span {
+    color: $by;
+  }
+
+  &__link {
+    display: inline-flex;
+    transition: color 0.4s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: rgb(72, 45, 225);
+    }
+  }
+}

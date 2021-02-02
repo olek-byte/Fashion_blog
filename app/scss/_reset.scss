@@ -8,9 +8,9 @@ html {
   box-sizing: inherit;
 }
 
-ul[class],
-ol[class] {
+ul[class] {
   padding: 0;
+  list-style: none;
 }
 
 body,
@@ -32,13 +32,18 @@ dd {
   margin: 0;
 }
 
-ul[class] {
-  list-style: none;
+nav,
+footer,
+header,
+aside {
+  display: block;
 }
 
-img {
-  max-width: 100%;
-  display: block;
+html,
+body {
+  height: 100%;
+  width: 100%;
+  // overflow-x: hidden;
 }
 
 input,
@@ -46,6 +51,16 @@ button,
 textarea,
 select {
   font: inherit;
+  border: none;
+  outline-color: #b7aa9a;
+}
+
+button {
+  margin: 0;
+  padding: 0;
+  color: inherit;
+  background-color: transparent;
+  cursor: pointer;
 }
 
 a {
@@ -53,7 +68,18 @@ a {
   color: inherit;
 }
 
-html,
-body {
-  overflow-x: hidden;
+img {
+  max-width: 100%;
+  display: block;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: 400;
+  padding: 0;
 }
