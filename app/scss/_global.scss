@@ -1,6 +1,7 @@
 html,
 body {
   height: 100%;
+  width: 100%;
 }
 
 body {
@@ -34,7 +35,7 @@ body {
   color: $heading;
 
   @extend %text-hiding;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
 
   &--hidden {
     font-size: 0;
@@ -57,6 +58,10 @@ body {
 
   @extend %text-hiding;
   -webkit-line-clamp: 1;
+
+  @include r(1099) {
+    max-width: 100%;
+  }
 }
 
 .category-link {
@@ -96,6 +101,10 @@ body {
     &:not(:last-child) {
       margin-right: 12px;
     }
+
+    @include r(480) {
+      font-size: 11px;
+    }
   }
 
   &__span {
@@ -114,3 +123,69 @@ body {
     }
   }
 }
+//scrollup
+.scrollup {
+  position: fixed;
+  right: 0;
+  bottom: 50px;
+  width: 35px;
+  height: 35px;
+  background-color: blue;
+  z-index: 1000;
+
+  transition: all 0.5s;
+
+  svg {
+    transform: rotate(180deg);
+  }
+
+  &:hover {
+    background-color: rgb(38, 200, 250);
+    fill: $accent;
+  }
+
+  &:active {
+    background-color: rgb(72, 45, 225);
+  }
+
+  .icon {
+    &--scrollup {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+//menu-btn
+.menu-btn {
+  width: 30px;
+  height: 30px;
+  background-color: $bg;
+  box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
+
+  display: none;
+  transition: all 0.9s;
+
+  @include r(767) {
+    display: block;
+  }
+
+  &:hover {
+    background-color: rgb(72, 45, 225);
+    fill: rgb(38, 200, 250);
+  }
+
+  .icon {
+    &--menu-btn {
+      width: 20px;
+      height: 20px;
+    }
+  }
+}
+
+.menu-btn.active {
+  svg {
+    transform: rotate(90deg);
+  }
+}
+

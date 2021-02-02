@@ -1,0 +1,134 @@
+//FOOTER//
+.footer {
+  padding-top: 100px;
+  background-color: #fff;
+
+  @include r(767) {
+    padding-top: 50px;
+  }
+
+  &__inner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &__logo {
+    img {
+      margin: 0 auto 60px;
+
+      @include r(767) {
+        margin-bottom: 30px;
+      }
+    }
+  }
+
+  &__nav {
+    margin-bottom: 30px;
+    display: block;
+  }
+
+  &__nav-list {
+    @include r(767) {
+      display: flex;
+    }
+
+    @include r(480) {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+      .main-nav__item {
+        margin: 0;
+        padding: 10px 0;
+      }
+
+    }
+  }
+
+  &__social {
+    margin-bottom: 40px;
+  }
+
+  &__list {
+    display: flex;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-right: 20px;
+    }
+  }
+
+  &__link {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 34px;
+    height: 34px;
+
+    background-color: #fff;
+    border: 1px solid $border;
+    border-radius: 50%;
+
+    transition: all 0.4s;
+
+    &:hover {
+      background-color: $accent;
+      border: none;
+
+      use {
+        fill: #fff;
+      }
+    }
+  }
+
+  .icon {
+    fill: $text;
+    height: 17px;
+
+    &--fb {
+      width: 10px;
+    }
+
+    &--tw {
+      width: 16px;
+      height: 14px;
+    }
+
+    &--pint {
+      width: 14px;
+    }
+
+    &--google {
+      width: 21px;
+      height: 14px;
+    }
+
+    &--be {
+      width: 20px;
+      height: 12px;
+    }
+
+    &--insta {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+
+  &__copyright {
+    padding: 34px 0;
+    width: 100%;
+    text-align: center;
+
+    border-top: 1px solid $border;
+
+    p {
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
+    }
+  }
+}
