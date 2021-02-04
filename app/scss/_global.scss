@@ -26,6 +26,18 @@ body {
   &--top {
     max-width: 1790px;
   }
+
+  &--blog{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding-bottom: 80px;
+    background-color: #fff;
+
+    @include r(1099) {
+      padding-bottom: 30px;
+    }
+  }
 }
 
 .title {
@@ -64,28 +76,7 @@ body {
   }
 }
 
-.category-link {
-  padding: 15px 0;
-  font-size: 12px;
-  text-transform: uppercase;
-  color: $accent;
-  text-align: center;
-  width: 100%;
-
-  @extend %text-hiding;
-  -webkit-line-clamp: 1;
-  transition: all 0.6s;
-
-  &:hover {
-    color: #CAE0E1;
-  }
-
-  &:active {
-    color: rgb(72, 45, 225);
-  }
-}
-
-.blog-bottom {
+.blog-card {
   &__list {
     display: flex;
   }
@@ -119,33 +110,62 @@ body {
     }
 
     &:active {
-      color: rgb(72, 45, 225);
+      color: $by;
     }
+  }
+}
+
+.category-link {
+  padding: 15px 0;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: $accent;
+  text-align: center;
+  width: 100%;
+
+  @extend %text-hiding;
+  -webkit-line-clamp: 1;
+  transition: all 0.6s;
+
+  &:hover {
+    color: #CAE0E1;
+  }
+
+  &:active {
+    color: $by;
   }
 }
 //scrollup
 .scrollup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
   position: fixed;
   right: 0;
   bottom: 50px;
   width: 35px;
   height: 35px;
-  background-color: blue;
+  background-color: $accent;
+  cursor: pointer;
   z-index: 900;
 
   transition: all 0.5s;
 
   svg {
+    fill: $heading;
     transform: rotate(180deg);
   }
 
   &:hover {
-    background-color: rgb(38, 200, 250);
-    fill: $accent;
+    background-color: $social;
+    svg{
+       fill: #fff;
+    }
   }
 
   &:active {
-    background-color: rgb(72, 45, 225);
+    background-color: $by;
   }
 
   .icon {
@@ -160,20 +180,13 @@ body {
 .menu-btn {
   width: 30px;
   height: 30px;
-  background-color: $bg;
-  box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.1));
+  box-shadow: (0px 2px 6px rgba(0, 0, 0, 0.5));
 
   display: none;
   z-index: 2000;
-  transition: all 0.9s;
 
   @include r(767) {
     display: block;
-  }
-
-  &:hover {
-    background-color: rgb(72, 45, 225);
-    fill: rgb(38, 200, 250);
   }
 
   .icon {
@@ -185,8 +198,10 @@ body {
 }
 
 .menu-btn.active {
+  box-shadow: (0px 2px 6px rgba(172, 155, 7, 0.836));
   svg {
     transform: rotate(90deg);
+    fill: $accent;
   }
 }
 

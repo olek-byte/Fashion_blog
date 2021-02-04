@@ -10,43 +10,65 @@
   &__bg {
     position: relative;
     max-width: 1920px;
-    min-height: 700px;
+    min-height: 100vh;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 85% 50%;
 
-    @include r(767) {
-      min-height: 500px;
+    &:after {
+      content: '';
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      right: 0;
+      left: 0;
+      width: 100%;
+      background: linear-gradient(rgba(0, 0, 0, 0.4),
+          rgba(0, 0, 0, 0.4));
+      z-index: 2;
     }
 
-    @include r(767) {
-      min-height: 450px;
-    }
+    // @include r(767) {
+    //   min-height: 500px;
+    // }
+
+    // @include r(767) {
+    //   min-height: 450px;
+    // }
   }
 
   &__content {
     position: absolute;
     bottom: 60px;
-
-    display: inline-flex;
-    flex-direction: column;
-
+    // display: inline-flex;
+    // flex-direction: column;
     color: #fff;
 
-    &--red {
-      color: rgb(243, 48, 48);
+    z-index: 100;
+
+  }
+
+  &__link {
+    transition: color 0.4s;
+
+    &:hover {
+      color: $accent;
+    }
+
+    &:active {
+      color: $by;
+    }
+
+    &--category {
+      display: inline-block;
+      padding: 15px 0;
+      text-transform: uppercase;
+
+      @extend %text-hiding;
+      -webkit-line-clamp: 1;
     }
   }
 
-  &__name {
-
-    // margin-bottom: 10px;
-    padding: 20px 0;
-    text-transform: uppercase;
-
-    @extend %text-hiding;
-    -webkit-line-clamp: 1;
-  }
 
   &__title {
     margin-bottom: 10px;
@@ -82,18 +104,5 @@
 
   &__span {
     color: $by;
-  }
-
-  &__link {
-    display: inline-flex;
-    transition: color 0.4s;
-
-    &:hover {
-      color: $accent;
-    }
-
-    &:active {
-      color: rgb(72, 45, 225);
-    }
   }
 }

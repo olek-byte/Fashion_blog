@@ -1,5 +1,6 @@
 .pagination {
   margin: 0 10%;
+  padding: 0 20px;
   border: 1px solid $border;
   transform: translateX(0%);
 
@@ -8,12 +9,15 @@
   }
 
   @include r(767) {
-    min-width: 54%;
+    min-width: 100%;
+    padding: 0;
+    margin: 0;
+    border: none;
   }
 
-  @include r(480) {
-    margin: 0;
-  }
+  // @include r(480) {
+  //   margin: 0;
+  // }
 
   &__inner {
     display: flex;
@@ -21,17 +25,6 @@
     justify-content: center;
   }
 
-  &__span {
-    padding: 0 15px;
-    text-transform: uppercase;
-
-    @extend %text-hiding;
-    -webkit-line-clamp: 1;
-
-    @include r(767) {
-      display: none;
-    }
-  }
 
   &__list {
     display: flex;
@@ -47,7 +40,7 @@
     @extend %text-hiding;
     -webkit-line-clamp: 1;
 
-    @include r(480) {
+    @include r(767) {
       border: 1px solid $border;
     }
   }
@@ -59,7 +52,14 @@
 
     transition: color 0.5s;
 
+    @extend %text-hiding;
+    -webkit-line-clamp: 1;
+
     &--prev {
+      @include r(767) {
+        display: none;
+      }
+
       &::before {
         content: '';
         position: absolute;
@@ -73,6 +73,10 @@
     }
 
     &--next {
+      @include r(767) {
+        display: none;
+      }
+
       &::after {
         content: '';
         position: absolute;

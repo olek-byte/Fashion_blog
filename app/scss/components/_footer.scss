@@ -83,6 +83,10 @@
         fill: #fff;
       }
     }
+
+    &:active{
+      background-color: $by;
+    }
   }
 
   .icon {

@@ -9,7 +9,7 @@
     justify-content: space-between;
   }
 
-  &__inner {
+  &__top {
     @include r(1099) {
       margin-right: 50px;
       max-width: 270px;
@@ -20,7 +20,7 @@
     }
   }
 
-  .category__inner {
+  &__bottom {
     @include r(1099) {
       width: 100%;
     }
@@ -97,13 +97,12 @@
       transition: all 0.5s;
 
       &:hover {
-        color: #fff;
-        background-color: #6bcece;
+        color: $heading;
+        background-color: $bg;
       }
 
       &:active {
-        color: #277c91;
-        background-color: #555858;
+        background-color: $by;
       }
     }
   }
@@ -130,6 +129,13 @@
     &__img {
       max-width: 270px;
       max-height: 160px;
+
+      transition: opacity 0.4s;
+
+      &:hover {
+        opacity: 0.9;
+      }
+
     }
 
     &__content {
@@ -230,20 +236,22 @@
       width: 88px;
       background-color: $bg;
 
+      transition: all 0.5s;
+
       &:hover {
-        color: $border;
+        color: #fff;
         background-color: $pagination;
 
         use {
-          fill: $border;
+          fill: #fff;
         }
       }
 
       &:active {
-        color: rgb(72, 45, 225);
+        color: $text;
 
         use {
-          fill: rgb(72, 45, 225);
+          fill:$text;
         }
       }
 
@@ -323,12 +331,12 @@
       transition: all 0.5s;
 
       &:hover {
-        background-color: $by;
-        color: #ff0000;
+        background-color: $border;
+        color: $accent;
       }
 
       &:active {
-        color: rgb(72, 45, 225);
+        color: $by;
       }
     }
   }

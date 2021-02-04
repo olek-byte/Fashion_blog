@@ -1,5 +1,21 @@
 $(function () {
 
+    // Fixed header
+    let header = $('.header');
+    let products = $('.hero');
+    let productsH = products.innerHeight();
+    let scrollPos = $(window).scrollTop();
+
+    document.addEventListener('scroll', function () {
+      scrollPos = $(this).scrollTop();
+
+      if (scrollPos > productsH) {
+        header.addClass('fixed');
+      } else {
+        header.removeClass('fixed');
+      }
+    });
+
   $('.js__nav-btn').on('click', function () {
     $('.main-nav__list').toggleClass('active');
     $('.header').toggleClass('active');
@@ -8,17 +24,17 @@ $(function () {
   });
 
   // scrollup
-  $('.scrollup-js').click(function () {
+  $('.js__scrollup').click(function () {
     $("html, body").animate({
       scrollTop: 0
     }, 1000);
   })
   $(window).scroll(function () {
     if ($(this).scrollTop() > 200) {
-      $('.scrollup-js').fadeIn();
+      $('.js__scrollup').fadeIn();
     }
     else {
-      $('.scrollup-js').fadeOut();
+      $('.js__scrollup').fadeOut();
     }
   });
 
